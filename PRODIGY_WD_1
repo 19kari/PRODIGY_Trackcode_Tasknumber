@@ -1,0 +1,107 @@
+#html code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <nav class="navbar" id="navbar">
+        <ul class="nav-links">
+            <li><a href="#home">Home</a> </li>
+            <li><a href="#about">about</a> </li>
+            <li><a href="#services">services</a> </li>
+            <li><a href="#contact">contact</a> </li>
+        </ul>
+    </nav>
+
+   <div class="content">
+    <section id="home">
+        <h1>home</h1>
+        <p>welcpme to our website</p>
+    </section>
+    <section id="about">
+        <h1> about</h1>
+        <p>learn more about us.</p>
+    </section>
+    <section id="services">
+        <h1>services</h1>
+        <p> discover our services</p>
+    </section>
+    <section id="contact">
+        <h1>contact</h1>
+        <p> get in touch with us.</p>
+    </section>
+   </div>
+   <script src="WD-1.js"></script>
+</body>
+</html>
+
+#css code
+body,html{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:Arial,  sans-serif ;
+}
+ .navbar{
+  position: fixed;
+  width: 100%;
+  top:0;
+  left: 0;
+  background-color: #333;
+  transition: background-color 0.35 ease;
+  z-index: 1000;
+ }
+ .nav-links{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+ }
+ .nav-links li{
+  margin: 0 15px;
+ }
+ .nav-links a{
+  text-decoration: none;
+  color: white;
+  padding: 15px 20px;
+  display: block;
+  transition: color 0.3s ease,backgroundColor 0.3s ease;
+  ;
+ }
+ .nav-links a:hover{
+  color: #333;
+  background-color: white;
+  border-radius: 4px;
+ }
+ .content{
+  margin-top: 80px;
+  padding: 20px;
+
+ }
+ #home{background: #f4f4f4;}
+ #about{background-color: #ddd;}
+ #services{background-color: #bbb;}
+#contact{background-color: #999;}
+
+#js code
+document.addEventListener ('DOMContentLoaded',function(){
+    const navbar =document.getElementById('navbar');
+    window.addEventListener('scroll',function() {
+        if (window.scrollY>50){
+            navbar.style.backgroundColor='#555';
+
+        } else {
+            navbar.style .backgroundColor='#333';
+
+        }
+
+    });
+});
+
+
